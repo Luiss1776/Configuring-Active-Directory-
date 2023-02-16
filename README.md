@@ -42,19 +42,38 @@ By doing this we will first create a resource group. Scroll upwards to the, "cre
 
 <img src="https://i.imgur.com/mVEFFjn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Set Domain Controller's NIC Private IP address from dynamic to static. 
+- Set Domain Controller's NIC Private IP address from dynamic to static. 
 
 By doing this, type in virtual machines in the search bar and click on the domain controller VM. Scroll to networking on the left column & click it. Once it opens, press on the blue highlighted link next to the, "Network interface." Scroll to the left column under, "settings" and hit the, "IP configurations" tab. When it opens, scroll down and click the selected name of the IP. As soon as it opens, change the assignment from, "Dynamic" to "static" and press the save logo on top. 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/7zCkC0T.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Ensure Connectivity between the Client-1 & Domain Controller 
+Ensure Connectivity between the client-1 & Domain Controller
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+- Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping)
+
+By doing this we will get the public IP address from Client-1, copy and paste the IP address into the remote desktop application, and sign in. Do the same process for DC-1. Once logged into both remote desktops, navigate back to azure and copy the private IP address for DC-1. Once DC-1’s private IP address is copied, log into client-1’s remote desktop and open the command prompt. Once opened, ping the domain controller's private IP, resulting in (Ping -t (DC-1 PRIVATE IP)). After you press enter, you should receive a time-out message. This, “Time-out” message is due to the Domain controller's firewalls blocking the “ICMP” traffic. 
+
+
+<img src="https://i.imgur.com/JfuKIrc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+- Login to the Domain Controller and enable ICMPv4 on the local windows Firewall
+ 
+We will go to the Domain controller's public IP address and copy it. Once copied, go into the remote desktop and log in with your credentials. Once you are signed in to DC-1’s desktop, click the windows icon at the bottom left or the start button and search wf.msc (Windows Defender Firewall). Once searched, open it and head to “inbound rules” located in the left column. Scan and find the category that falls under the protocol column. When you find the column scroll down until you locate ICMPv4. Verify it instates the name, “Core Networking Diagnostics-ICMP Echo Request”. After you locate it, enable both rows of “ICMP Echo Requests”. 
+
+
+<img src="https://i.imgur.com/gJoKozF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+- Check back at Client-1's Remote Desk Top to see the ping succeed
+
+Once both of the “Core Network Diagnostics-ICMP Echo Requests” are enabled, check Client-1’s command prompt. The Domain controller's or (DC-1’s) reply sequence has ceased to timed out and has allowed the ICMP traffic to come through the firewalls. 
+
+Type in control C to stop the (Ping -t) from continuing. In conclusion, now that DC-1’s firewalls are allowing the ICMP traffic to proceed, there can be communication between Client-1 and the domain controller. 
+
 </p>
 <br />
 
