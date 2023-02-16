@@ -44,7 +44,7 @@ By doing this we will first create a resource group. Scroll upwards to the, "cre
 
 Set Domain Controller's NIC Private IP address from dynamic to static. 
 
-By doing this we will type in virtual machines in the search bar and click on the domain controller VM. Scroll to networking on the left column. Once it opens, click on the blue highlighted link next to the Network interface. Scroll to the left column under settings and hit the Ip configurations tab. When it opens, scroll down and click the selected name of the IP. Once it opens, change the assignment from Dynamic to static and press the save logo on top. 
+By doing this, type in virtual machines in the search bar and click on the domain controller VM. Scroll to networking on the left column & click it. Once it opens, press on the blue highlighted link next to the, "Network interface." Scroll to the left column under, "settings" and hit the, "IP configurations" tab. When it opens, scroll down and click the selected name of the IP. As soon as it opens, change the assignment from, "Dynamic" to "static" and press the save logo on top. 
 </p>
 <br />
 
