@@ -1,10 +1,14 @@
 <p align="center">
-<img src="https://i.imgur.com/pU5A58S.png" alt="Microsoft Active Directory Logo"/>
+<img src="https://user-images.githubusercontent.com/123595654/219353683-95266159-08a0-4165-a5ed-cb9487a0670a.gif" alt="Microsoft Active Directory Logo"/>
 </p>
 
-<h1>On-premises Active Directory Deployed in the Cloud ☁️ (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+<h1>On-premises Active Directory Deployed in the Cloud ☁️  
 
+<img src="https://user-images.githubusercontent.com/123595654/219356229-2859fb38-37ec-4593-9705-9cd05bcc8a53.gif" alt="Microsoft Active Directory Logo"/>
+</p>
+
+(Azure)</h1>
+This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
 
 <h2>Environments and Technologies Used 🧑‍💻</h2>
