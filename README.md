@@ -31,12 +31,20 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/yyQUwSx.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Configure Resources in Azure 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Create two VMs inside of Azure, One named the Domain Controller or (DC-1) operating on (Windows Server 2022) & the other virtual machine named, “Client-1” operating on (Windows 10). 
+
+By doing this we will first create a resource group. We will go to the create resource group tab or simply type it in the search bar. Once created, you will name the resource group, review it, and finalize it. When done scroll to create a virtual machine, we will create the virtual machine and name it DC-1. Click the plus button under virtual machines and fill out any information regarding the VM. Make sure the VM has the same region you created your resource group with. Create a login and password for the VM to further access it on Remote Desktop. Once done, review and finalize the VM. Once done, repeat the process above and create another VM named Client-1. All VMs & resource groups should be under the same region and have the same defaulted vnet in their configurations. 
+
+<img src="https://i.imgur.com/mVEFFjn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Set Domain Controller's NIC Private IP address from dynamic to static. 
+
+By doing this we will type in virtual machines in the search bar and click on the domain controller VM. Scroll to networking on the left column. Once it opens, click on the blue highlighted link next to the Network interface. Scroll to the left column under settings and hit the Ip configurations tab. When it opens, scroll down and click the selected name of the IP. Once it opens, change the assignment from Dynamic to static and press the save logo on top. 
 </p>
 <br />
 
