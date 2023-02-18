@@ -87,17 +87,18 @@ Type in control C to stop the (Ping -t) from continuing. In conclusion, now that
 <p>
 - Create an Admin & Normal User Account in Active Directory 
 
-Open the Active Directory Users and Computers console. You can do this by clicking on the Start button, selecting Administrative Tools, and then selecting Active Directory Users and Computers.
+- Open the Active Directory Users and Computers console. You can do this by clicking on the Start button, selecting Administrative Tools, and then selecting Active Directory Users and Computers.
 
-Navigate to the container where you want to create the user accounts. This is typically the Users container in the domain.
+- Navigate to the container where you want to create the user accounts. This is typically the Users container in the domain.
 
-Right-click on the container and select New -> User. This will open the New Object - User wizard.
+- Right-click on the container and select New -> User. This will open the New Object - User wizard.
 
-In the first screen of the wizard, enter the user's first name, last name, and username. You can also enter a display name, which is what will appear in the Global Address List.
+- In the first screen of the wizard, enter the user's first name, last name, and username. You can also enter a display name, which is what will appear in the Global Address List.
 
-In the second screen of the wizard, enter and confirm a password for the user.
+- In the second screen of the wizard, enter and confirm a password for the user.
 In the third screen of the wizard, select the user's group membership. For an admin account, you will want to add the user to the Domain Admins group. For a normal user account, you can add the user to any appropriate groups based on their role.
-Click Next to review your selections, and then click Finish to create the user account. Once you've created the user accounts, you can set additional properties and configure any necessary permissions for the accounts. It's also important to regularly review user accounts and adjust their group membership and permissions as needed to maintain security and compliance.
+ 
+- Click Next to review your selections, and then click Finish to create the user account. Once you've created the user accounts, you can set additional properties and configure any necessary permissions for the accounts. It's also important to regularly review user accounts and adjust their group membership and permissions as needed to maintain security and compliance.
 </p>
 <br />
 
@@ -108,25 +109,25 @@ Click Next to review your selections, and then click Finish to create the user a
 <p>
 Join Client-1 to your Domain (mydomain.com)
 
-To join a client computer to a domain (in this example, "mydomain.com"), follow these steps:
+- To join a client computer to a domain (in this example, "mydomain.com"), follow these steps:
 
-Log in to the client computer (Client-1) using an administrator account.
+- Log in to the client computer (Client-1) using an administrator account.
 
-Open the Control Panel and navigate to System and Security -> System.
+- Open the Control Panel and navigate to System and Security -> System.
+ 
+- Click on "Change settings" next to "Computer name, domain, and workgroup settings".
 
-Click on "Change settings" next to "Computer name, domain, and workgroup settings".
+- Click "Change" next to "To rename this computer or change its domain or workgroup".
 
-Click "Change" next to "To rename this computer or change its domain or workgroup".
+- Select the "Domain" option and enter the name of your domain (in this example, "mydomain.com"). Click "OK".
 
-Select the "Domain" option and enter the name of your domain (in this example, "mydomain.com"). Click "OK".
+- Enter the credentials of a user account with permission to join a computer to the domain. This is typically a domain administrator account.
 
-Enter the credentials of a user account with permission to join a computer to the domain. This is typically a domain administrator account.
+- Click "OK" to confirm the domain change and restart the computer when prompted.
 
-Click "OK" to confirm the domain change and restart the computer when prompted.
+- After the computer restarts, log in using an account from the domain (in this example, "mydomain.com").
 
-After the computer restarts, log in using an account from the domain (in this example, "mydomain.com").
-
-Once the client computer (Client-1) is joined to the domain, you can configure various domain policies, manage user accounts and permissions, and perform other domain-related tasks from the domain controller or other administrative workstations. It's important to ensure that the client computer is properly secured and updated with the latest patches and antivirus software before joining it to the domain to minimize security risks.
+- Once the client computer (Client-1) is joined to the domain, you can configure various domain policies, manage user accounts and permissions, and perform other domain-related tasks from the domain controller or other administrative workstations. It's important to ensure that the client computer is properly secured and updated with the latest patches and antivirus software before joining it to the domain to minimize security risks.
 </p>
 <br />
 
@@ -137,27 +138,27 @@ Once the client computer (Client-1) is joined to the domain, you can configure v
 <p>
 Setup Remote Desktop for non-admin users on client-1
 
-To set up Remote Desktop for non-admin users on Client-1, follow these steps:
+- To set up Remote Desktop for non-admin users on Client-1, follow these steps:
 
-Log in to Client-1 using an administrator account.
+- Log in to Client-1 using an administrator account.
 
-Open the Control Panel and navigate to System and Security -> System.
+- Open the Control Panel and navigate to System and Security -> System.
 
-Click on "Remote settings" on the left-hand side of the screen.
+- Click on "Remote settings" on the left-hand side of the screen.
 
-In the "Remote" tab, select "Allow remote connections to this computer" and choose the appropriate option for your network security.
+- In the "Remote" tab, select "Allow remote connections to this computer" and choose the appropriate option for your network security.
 
-Click on "Select Users".
+- Click on "Select Users".
 
-Click on "Add" to add a new user account.
+- Click on "Add" to add a new user account.
 
-Type the name of the non-admin user you want to grant remote access to and click "OK".
+- Type the name of the non-admin user you want to grant remote access to and click "OK".
 
-Choose the appropriate option for the user's remote access permissions, either "Full Control" or "Remote Desktop Users".
+- Choose the appropriate option for the user's remote access permissions, either "Full Control" or "Remote Desktop Users".
 
-Click "OK" to confirm the user's remote access permissions.
+- Click "OK" to confirm the user's remote access permissions.
 
-Close the Remote Desktop settings and log out of the administrator account.
+- Close the Remote Desktop settings and log out of the administrator account.
 
 After completing these steps, the non-admin user should be able to connect to Client-1 via Remote Desktop using their own credentials. Note that the non-admin user may need to install the Remote Desktop client software on their own computer if it's not already installed. Additionally, it's important to ensure that the non-admin user's account is properly secured and has the necessary permissions to perform remote tasks on Client-1 to minimize security risks.
 </p>
@@ -169,25 +170,25 @@ After completing these steps, the non-admin user should be able to connect to Cl
 <p>
 Create additional Users & attempt to log into Client-1 with one of the users 
 
-To create additional users and attempt to log into Client-1 with one of the users, follow these steps:
+- To create additional users and attempt to log into Client-1 with one of the users, follow these steps:
 
-Log in to Client-1 using an administrator account.
+- Log in to Client-1 using an administrator account.
 
-Open the Control Panel and navigate to User Accounts -> Manage another account.
+- Open the Control Panel and navigate to User Accounts -> Manage another account.
 
-Click on "Add a new user in PC settings".
+- Click on "Add a new user in PC settings".
 
-Enter the new user's email address or phone number and click "Next".
+- Enter the new user's email address or phone number and click "Next".
 
 Choose whether to create a Microsoft account or a local account for the new user. If you choose to create a Microsoft account, the user will need to sign up for a Microsoft account if they don't already have one. If you choose to create a local account, you will need to set a username and password for the user.
 
-Click "Finish" to create the new user account.
+- Click "Finish" to create the new user account.
 
-To log in to Client-1 with the new user account, log out of the administrator account and click on the "Other user" button on the login screen.
+- To log in to Client-1 with the new user account, log out of the administrator account and click on the "Other user" button on the login screen.
 
-Enter the username and password for the new user account and click "Sign in".
+- Enter the username and password for the new user account and click "Sign in".
 
-If the login is successful, the new user account should be able to access the desktop and applications on Client-1.
+- If the login is successful, the new user account should be able to access the desktop and applications on Client-1.
 
 Repeat steps 3-6 to create additional users as needed. It's important to ensure that each user account is properly secured and has the appropriate permissions to access the resources they need on Client-1.
 </p>
