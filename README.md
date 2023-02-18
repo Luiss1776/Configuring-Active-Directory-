@@ -42,7 +42,7 @@ Configure Resources in Azure
 
 - Create two VMs inside of Azure, One named the Domain Controller or (DC-1) operating on (Windows Server 2022) & the other virtual machine named, “Client-1” operating on (Windows 10). 
 
-- By doing this we will first create a resource group. Scroll upwards to the, "create resource group" tab or simply type it in the search bar. Once created, name the resource group, review it, and finalize it. When done scroll to, "create a virtual machine." Next, create the virtual machine and name it, "DC-1." Click the, "Plus" (+) button under, "Virtual machines" and fill out any information regarding the VM. Make sure the VM has the same region created with the resource group. Afterwards, create a login and password for the VM to further access that VM on a Remote Desktop. Once done, review and finalize the VM. Subsequently, repeat the process above and create another VM named, "Client-1." All VMs & resource groups should be under the same region and have the same defaulted vnet in their configurations. 
+- By doing this, first create a resource group. Scroll upwards to the, "create resource group" tab or simply type it in the search bar. Once created, name the resource group, review it, and finalize it. When done scroll to, "create a virtual machine." Next, create the virtual machine and name it, "DC-1." Click the, "Plus" (+) button under, "Virtual machines" and fill out any information regarding the VM. Make sure the VM has the same region created with the resource group. Afterwards, create a login and password for the VM to further access that VM on a Remote Desktop. Once done, review and finalize the VM. Subsequently, repeat the process above and create another VM named, "Client-1." All VMs & resource groups should be under the same region and have the same defaulted vnet in their configurations. 
 
 <img src="https://i.imgur.com/mVEFFjn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
@@ -60,7 +60,7 @@ Ensure Connectivity between the client-1 & Domain Controller
 
 - Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping)
 
-- By doing this we will get the public IP address from Client-1, copy and paste the IP address into the remote desktop application, and sign in. Do the same process for DC-1. Once logged into both remote desktops, navigate back to azure and copy the private IP address for DC-1. Once DC-1’s private IP address is copied, log into client-1’s remote desktop and open the command prompt. Once opened, ping the domain controller's private IP, resulting in (Ping -t (DC-1 PRIVATE IP)). After you press enter, you should receive a time-out message. This, “Time-out” message is due to the Domain controller's firewalls blocking the “ICMP” traffic. 
+- By doing this, get the public IP address from Client-1, copy and paste the IP address into the remote desktop application, and sign in. Do the same process for DC-1. Once logged into both remote desktops, navigate back to azure and copy the private IP address for DC-1. Once DC-1’s private IP address is copied, log into client-1’s remote desktop and open the command prompt. Once opened, ping the domain controller's private IP, resulting in (Ping -t (DC-1 PRIVATE IP)). After you press enter, you should receive a time-out message. This, “Time-out” message is due to the Domain controller's firewalls blocking the “ICMP” traffic. 
 
 
 <img src="https://i.imgur.com/JfuKIrc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
