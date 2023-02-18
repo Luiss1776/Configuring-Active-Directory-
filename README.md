@@ -40,15 +40,15 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <p>
 Configure Resources in Azure 
 
-Create two VMs inside of Azure, One named the Domain Controller or (DC-1) operating on (Windows Server 2022) & the other virtual machine named, “Client-1” operating on (Windows 10). 
+- Create two VMs inside of Azure, One named the Domain Controller or (DC-1) operating on (Windows Server 2022) & the other virtual machine named, “Client-1” operating on (Windows 10). 
 
-By doing this we will first create a resource group. Scroll upwards to the, "create resource group" tab or simply type it in the search bar. Once created, name the resource group, review it, and finalize it. When done scroll to, "create a virtual machine." Next, create the virtual machine and name it, "DC-1." Click the, "Plus" (+) button under, "Virtual machines" and fill out any information regarding the VM. Make sure the VM has the same region created with the resource group. Afterwards, create a login and password for the VM to further access that VM on a Remote Desktop. Once done, review and finalize the VM. Subsequently, repeat the process above and create another VM named, "Client-1." All VMs & resource groups should be under the same region and have the same defaulted vnet in their configurations. 
+- By doing this we will first create a resource group. Scroll upwards to the, "create resource group" tab or simply type it in the search bar. Once created, name the resource group, review it, and finalize it. When done scroll to, "create a virtual machine." Next, create the virtual machine and name it, "DC-1." Click the, "Plus" (+) button under, "Virtual machines" and fill out any information regarding the VM. Make sure the VM has the same region created with the resource group. Afterwards, create a login and password for the VM to further access that VM on a Remote Desktop. Once done, review and finalize the VM. Subsequently, repeat the process above and create another VM named, "Client-1." All VMs & resource groups should be under the same region and have the same defaulted vnet in their configurations. 
 
 <img src="https://i.imgur.com/mVEFFjn.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-- Set Domain Controller's NIC Private IP address from dynamic to static. 
+Set Domain Controller's NIC Private IP address from dynamic to static. 
 
-By doing this, type in virtual machines in the search bar and click on the domain controller VM. Scroll to networking on the left column & click it. Once it opens, press on the blue highlighted link next to the, "Network interface." Scroll to the left column under, "settings" and hit the, "IP configurations" tab. When it opens, scroll down and click the selected name of the IP. As soon as it opens, change the assignment from, "Dynamic" to "static" and press the save logo on top. 
+- By doing this, type in virtual machines in the search bar and click on the domain controller VM. Scroll to networking on the left column & click it. Once it opens, press on the blue highlighted link next to the, "Network interface." Scroll to the left column under, "settings" and hit the, "IP configurations" tab. When it opens, scroll down and click the selected name of the IP. As soon as it opens, change the assignment from, "Dynamic" to "static" and press the save logo on top. 
 </p>
 <br />
 
@@ -60,23 +60,23 @@ Ensure Connectivity between the client-1 & Domain Controller
 
 - Login to Client-1 with Remote Desktop and ping DC-1’s private IP address with ping -t <ip address> (perpetual ping)
 
-By doing this we will get the public IP address from Client-1, copy and paste the IP address into the remote desktop application, and sign in. Do the same process for DC-1. Once logged into both remote desktops, navigate back to azure and copy the private IP address for DC-1. Once DC-1’s private IP address is copied, log into client-1’s remote desktop and open the command prompt. Once opened, ping the domain controller's private IP, resulting in (Ping -t (DC-1 PRIVATE IP)). After you press enter, you should receive a time-out message. This, “Time-out” message is due to the Domain controller's firewalls blocking the “ICMP” traffic. 
+- By doing this we will get the public IP address from Client-1, copy and paste the IP address into the remote desktop application, and sign in. Do the same process for DC-1. Once logged into both remote desktops, navigate back to azure and copy the private IP address for DC-1. Once DC-1’s private IP address is copied, log into client-1’s remote desktop and open the command prompt. Once opened, ping the domain controller's private IP, resulting in (Ping -t (DC-1 PRIVATE IP)). After you press enter, you should receive a time-out message. This, “Time-out” message is due to the Domain controller's firewalls blocking the “ICMP” traffic. 
 
 
 <img src="https://i.imgur.com/JfuKIrc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 - Login to the Domain Controller and enable ICMPv4 on the local windows Firewall
  
-We will go to the Domain controller's public IP address and copy it. Once copied, go into the remote desktop and log in with your credentials. Once you are signed in to DC-1’s desktop, click the windows icon at the bottom left or the start button and search wf.msc (Windows Defender Firewall). Once searched, open it and head to “inbound rules” located in the left column. Scan and find the category that falls under the protocol column. When you find the column scroll down until you locate ICMPv4. Verify it instates the name, “Core Networking Diagnostics-ICMP Echo Request”. After you locate it, enable both rows of “ICMP Echo Requests”. 
+- We will go to the Domain controller's public IP address and copy it. Once copied, go into the remote desktop and log in with your credentials. Once you are signed in to DC-1’s desktop, click the windows icon at the bottom left or the start button and search wf.msc (Windows Defender Firewall). Once searched, open it and head to “inbound rules” located in the left column. Scan and find the category that falls under the protocol column. When you find the column scroll down until you locate ICMPv4. Verify it instates the name, “Core Networking Diagnostics-ICMP Echo Request”. After you locate it, enable both rows of “ICMP Echo Requests”. 
 
 
 <img src="https://i.imgur.com/gJoKozF.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-- Check back at Client-1's Remote Desk Top to see the ping succeed
+Check back at Client-1's Remote Desk Top to see the ping succeed
 
-Once both of the “Core Network Diagnostics-ICMP Echo Requests” are enabled, check Client-1’s command prompt. The Domain controller's or (DC-1’s) reply sequence has ceased to timed out and has allowed the ICMP traffic to come through the firewalls. 
+- Once both of the “Core Network Diagnostics-ICMP Echo Requests” are enabled, check Client-1’s command prompt. The Domain controller's or (DC-1’s) reply sequence has ceased to timed out and has allowed the ICMP traffic to come through the firewalls. 
 
-Type in control C to stop the (Ping -t) from continuing. In conclusion, now that DC-1’s firewalls are allowing the ICMP traffic to proceed, there can be communication between Client-1 and the domain controller. 
+- Type in control C to stop the (Ping -t) from continuing. In conclusion, now that DC-1’s firewalls are allowing the ICMP traffic to proceed, there can be communication between Client-1 and the domain controller. 
 
 </p>
 <br />
@@ -85,7 +85,7 @@ Type in control C to stop the (Ping -t) from continuing. In conclusion, now that
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-- Create an Admin & Normal User Account in Active Directory 
+Create an Admin & Normal User Account in Active Directory 
 
 - Open the Active Directory Users and Computers console. You can do this by clicking on the Start button, selecting Administrative Tools, and then selecting Active Directory Users and Computers.
 
@@ -127,7 +127,7 @@ Join Client-1 to your Domain (mydomain.com)
 
 - After the computer restarts, log in using an account from the domain (in this example, "mydomain.com").
 
-- Once the client computer (Client-1) is joined to the domain, you can configure various domain policies, manage user accounts and permissions, and perform other domain-related tasks from the domain controller or other administrative workstations. It's important to ensure that the client computer is properly secured and updated with the latest patches and antivirus software before joining it to the domain to minimize security risks.
+Once the client computer (Client-1) is joined to the domain, you can configure various domain policies, manage user accounts and permissions, and perform other domain-related tasks from the domain controller or other administrative workstations. It's important to ensure that the client computer is properly secured and updated with the latest patches and antivirus software before joining it to the domain to minimize security risks.
 </p>
 <br />
 
