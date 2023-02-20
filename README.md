@@ -82,7 +82,7 @@ Check back at Client-1's Remote Desk Top to see the ping succeed
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/6TF60Bj.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Create an Admin & Normal User Account in Active Directory 
@@ -104,7 +104,7 @@ In the third screen of the wizard, select the user's group membership. For an ad
 
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/zRuXEB2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Join Client-1 to your Domain (mydomain.com)
