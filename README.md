@@ -165,7 +165,7 @@ After completing these steps, the non-admin user should be able to connect to Cl
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/wEWGPad.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Create additional Users & attempt to log into Client-1 with one of the users 
