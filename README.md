@@ -133,7 +133,7 @@ Once the client computer (Client-1) is joined to the domain, you can configure v
 
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/oUHjORp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Setup Remote Desktop for non-admin users on client-1
